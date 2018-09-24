@@ -365,8 +365,6 @@ export class TableComponent implements OnInit, OnDestroy {
   }
 
   edit(id: number) {
-    //this.http.delete(id);
-    //this.applyFilter();
     if (this.editable) {
       this.openDialog(this.editable);
     }
