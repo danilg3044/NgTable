@@ -1,0 +1,11 @@
+td { 
+    padding: 4px;
+}
+
+thead {
+    font-weight: bold
+}
+
+.mat-form-field {
+    display: block;
+}

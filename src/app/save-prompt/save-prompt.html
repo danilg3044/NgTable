@@ -1,0 +1,27 @@
+<h2 mat-dialog-title>{{title}}</h2>
+<mat-dialog-content>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Value</td>
+            <td>Current</td>
+            <td>New</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let change of data.changes">
+            <ng-template [ngTemplateOutlet]="changeTemplate" [ngTemplateOutletContext]="{$implicit: change}"></ng-template>
+        </tr>
+    </tbody>
+</table><br>
+<ng-template #changeTemplate let-change>
+    <td>{{change.name}}</td>
+    <td>{{change.current}}</td>
+    <td>{{change.new}}</td>
+</ng-template>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button class="mat-raised-button"(click)="discard()">Discard</button>
+    <button class="mat-raised-button mat-primary"(click)="save()">Save</button>
+</mat-dialog-actions>
