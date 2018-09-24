@@ -357,6 +357,7 @@ export class TableComponent implements OnInit, OnDestroy {
             }
           });
 
+          // this.http.update(id);
           this.applyFilter();
           this.openSnackBar('message', 'action');
         }
